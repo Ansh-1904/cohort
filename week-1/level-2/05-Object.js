@@ -1,4 +1,5 @@
 // Object Methods Explanation
+// last topic
 function objectMethods(obj) {
   console.log("Original Object:", obj);
 
