@@ -22,7 +22,7 @@ app.post("/health_checkup", function(req,res){
     req.header;
     req,query;
     res.json({
-        msg:"Hii there"
+        msg:"Hii there boss"
     })
 });
 
