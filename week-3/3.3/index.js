@@ -13,5 +13,9 @@ const data={
 
 //to verify token
 //here person tried to guess password but got invalid signature error
-const verifying=jwt.verify("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFuc2ggU29sYW5raSIsImFjY19kZXRhaWxzIjoxMjEyMTIsImlhdCI6MTcxMTkwMTMxMn0.uiVkq16FUy0XST2ybpqrWc5UcF7Wh68Sov4jPBAjWLI","gwjsasbab")
+// const verifying=jwt.verify("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFuc2ggU29sYW5raSIsImFjY19kZXRhaWxzIjoxMjEyMTIsImlhdCI6MTcxMTkwMTMxMn0.uiVkq16FUy0XST2ybpqrWc5UcF7Wh68Sov4jPBAjWLI","gwjsasbab")
+// console.log(verifying);
+
+//pass real password
+const verifying=jwt.verify("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFuc2ggU29sYW5raSIsImFjY19kZXRhaWxzIjoxMjEyMTIsImlhdCI6MTcxMTkwMTMxMn0.uiVkq16FUy0XST2ybpqrWc5UcF7Wh68Sov4jPBAjWLI","secret")
 console.log(verifying);
