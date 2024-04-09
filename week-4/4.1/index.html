@@ -20,6 +20,14 @@
         //                 })
         //         })
         // }
+        let timeout;
+        function debouncePopulateDiv()
+        {
+            clearTimeout(timeout)
+            timeout=setTimeout(function(){
+                populateSum2()
+            },100)
+        }
 
         async function populateSum2()
         {
@@ -33,11 +41,9 @@
     </script>
 
     <body>
-        <input id="firstNumber" type="text" placeholder="First Number"></body>
+        <input oninput="debouncePopulateDiv()" id="firstNumber" type="text" placeholder="First Number"></body>
         <br></br>
-        <input id="secondNumber" type="text" placeholder="Second Number"></input>
-        <br></br>
-        <button onclick="populateSum2()">Calculate Sum</button>
+        <input oninput="debouncePopulateDiv()" id="secondNumber" type="text" placeholder="Second Number"></input>
         <br></br>
 
         <div id="finalSum"></div>
