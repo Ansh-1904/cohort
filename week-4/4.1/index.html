@@ -1,0 +1,45 @@
+<br>
+
+    <script>
+        // function populateSum()
+        // {
+        //     const a=document.getElementById("firstNumber").value;
+        //     const b=document.getElementById("secondNumber").value;
+
+        //     // const element=document.getElementById("finalSum")
+
+        //     fetch("https://sum-server.100xdevs.com/sum?a="+a+"&b="+2)
+        //         .then(function(response)
+        //         {
+        //             // console.log(response);
+        //             const ans=response.text()
+        //                 .then(function(ans)
+        //                 {
+        //                     console.log(ans);
+        //                     document.getElementById("finalSum").innerHTML=ans;
+        //                 })
+        //         })
+        // }
+
+        async function populateSum2()
+        {
+            const a=document.getElementById("firstNumber").value;
+            const b=document.getElementById("secondNumber").value;
+
+            const response=await fetch("https://sum-server.100xdevs.com/sum?a="+a+"&b="+2)
+            const ans=await response.text()
+            document.getElementById("finalSum").innerHTML=ans;
+        }
+    </script>
+
+    <body>
+        <input id="firstNumber" type="text" placeholder="First Number"></body>
+        <br></br>
+        <input id="secondNumber" type="text" placeholder="Second Number"></input>
+        <br></br>
+        <button onclick="populateSum2()">Calculate Sum</button>
+        <br></br>
+
+        <div id="finalSum"></div>
+    </body>
+</html>
