@@ -24,7 +24,7 @@ function adminMiddleware(req, res, next) {
     }catch(e)
     {
         res.json({
-            "msg":"Incorrect inputs"
+            "msg":"Incorrect crdentails"
         })
     }
 }
